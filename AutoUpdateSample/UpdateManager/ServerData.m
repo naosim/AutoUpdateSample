@@ -27,7 +27,12 @@
     return APPLICATION_TMP_DIR;
 }
 
+
 - (NSString*)htmlPath {
     return [APPLICATION_DOC_DIR stringByAppendingString:@"/html"];
+}
+
+- (NSString*)indexHtmlPath {
+    return [APPLICATION_DOC_DIR stringByAppendingString:@"/html/update.txt"];
 }
 @end

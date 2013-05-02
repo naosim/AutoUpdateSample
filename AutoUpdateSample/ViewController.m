@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "ServerData.h"
 
 @interface ViewController ()
 
@@ -17,7 +18,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    
+    // HTMLを表示する
+	[webView loadRequest:[NSURLRequest requestWithURL:[NSURL fileURLWithPath:ClientData.new.indexHtmlPath]]];
 }
 
 - (void)didReceiveMemoryWarning

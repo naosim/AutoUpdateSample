@@ -46,6 +46,14 @@
     [simpleFileManager clearDirectory:clientData.dlPath];
 }
 
+- (void)setupFirstLunchIfNeed {
+    if(![self isFirstLunch]) return;
+    NSString* zipPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingString:@"/update.zip"];
+    [self unzipToHtmlFromZip:zipPath];
+    
+}
+
+
 - (void)unzipToHtmlFromZip:(NSString*)zipPath {
     [simpleFileManager clearDirectory:clientData.htmlPath];
     ZipArchive* za = [[ZipArchive alloc] init];
@@ -55,13 +63,6 @@
         }
         [za UnzipCloseFile];
     }
-}
-
-- (void)setupFirstLunchIfNeed {
-    if(![self isFirstLunch]) return;
-    NSString* zipPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingString:@"/update.zip"];
-    [self unzipToHtmlFromZip:zipPath];
-    
 }
 
 - (BOOL)isFirstLunch {

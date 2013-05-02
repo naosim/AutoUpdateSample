@@ -16,6 +16,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+    [self update];
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
@@ -23,7 +26,13 @@
     [self.window makeKeyAndVisible];
     
     
+    return YES;
+}
+
+- (void)update {
     UpdateManager* manager = [[UpdateManager alloc] initWithServerData:ServerData.new ClientData:ClientData.new];
+    
+    // 初回起動時に表示するhtmlをセットアップする
     [manager setupFirstLunchIfNeed];
     
     // アップデートが開始できる状態か?
@@ -44,8 +53,7 @@
             }];
         }];
     }
-    
-    return YES;
+
 }
 
 - (void)showAlertWithBool:(NSNumber*)boolNumber {

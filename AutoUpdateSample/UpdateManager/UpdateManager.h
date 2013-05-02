@@ -20,7 +20,7 @@
     ClientData* clientData;
 }
 - (id)initWithServerData:(ServerData*)serverData ClientData:(ClientData*)clientData;
-
+/// 初回起動時に表示するzipを解凍する処理
 - (void)setupFirstLunchIfNeed;
 
 /// アップデートがあるかどうかチェックする

@@ -16,5 +16,7 @@
 @interface ClientData : NSObject
 @property (weak, nonatomic, readonly)NSString* zipPath;
 @property (weak, nonatomic, readonly)NSString* dlPath;
+
 @property (weak, nonatomic, readonly)NSString* htmlPath;
+@property (weak, nonatomic, readonly)NSString* indexHtmlPath;
 @end

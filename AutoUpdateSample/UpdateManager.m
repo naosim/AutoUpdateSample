@@ -8,14 +8,15 @@
 
 #import "UpdateManager.h"
 #import "OriginalVersionData.h"
+#import "ServerData.h"
 
 @implementation UpdateManager
 
-#define UPDATE_MANIFEST_URL (@"http://localhost")
-
 - (id)init {
     if(self = [super init]) {
-        manifestChecker = [[UpdateCheker alloc] initWithURL:UPDATE_MANIFEST_URL versionData:OriginalVersionData.new asyncURLConnection:AsyncURLConnection.new];
+        manifestChecker = [[UpdateCheker alloc] initWithURL:ServerData.new.versionDataUrl
+                                                versionData:OriginalVersionData.new
+                                         asyncURLConnection:AsyncURLConnection.new];
     }
     return self;
 }

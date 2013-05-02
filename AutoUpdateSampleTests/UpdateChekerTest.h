@@ -9,6 +9,6 @@
 #import <SenTestingKit/SenTestingKit.h>
 #import "UpdateCheker.h"
 
-@interface ManifestChekerTest : SenTestCase
+@interface UpdateChekerTest : SenTestCase
 
 @end

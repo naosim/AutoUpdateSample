@@ -9,13 +9,23 @@
 #import "OriginalVersionData.h"
 
 @implementation OriginalVersionData
+#define KEY_ORIGINAL_VERSION @"KEY_ORIGINAL_VERSION"
+
 - (id)initWithUserDefaults:(NSUserDefaults*)inuserDefaults {
     if(self = [super init]) {
         userDefaults = inuserDefaults;
     }
     return self;
 }
-- (BOOL)isUpdateWithVersion:(int)version {return NO;}
-- (void)setVersion:(int)version {}
+
+- (BOOL)isUpdateWithVersion:(int)version {
+    int currentVersion = [userDefaults integerForKey:KEY_ORIGINAL_VERSION];
+    return currentVersion < version;
+}
+
+- (void)setVersion:(int)version {
+    [userDefaults setInteger:version forKey:KEY_ORIGINAL_VERSION];
+    [userDefaults synchronize];
+}
 
 @end

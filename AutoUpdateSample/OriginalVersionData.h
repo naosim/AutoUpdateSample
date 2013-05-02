@@ -12,6 +12,5 @@
     NSUserDefaults* userDefaults;
 }
 - (id)initWithUserDefaults:(NSUserDefaults*)userDefaults;
-- (BOOL)isUpdateWithVersion:(int)version;
 - (void)setVersion:(int)version;
 @end

@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "ServerData.h"
+#import "ClientData.h"
 
 @interface ViewController ()
 

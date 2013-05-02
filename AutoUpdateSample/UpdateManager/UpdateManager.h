@@ -11,6 +11,8 @@
 #import "UpdateCheker.h"
 #import "FileDwonloader.h"
 #import "ServerData.h"
+#import "ClientData.h"
+#import "OriginalVersionData.h"
 
 /// アップデートまわりのファサード
 @interface UpdateManager : NSObject {
@@ -18,6 +20,7 @@
     FileDwonloader* fileDownloader;
     SimpleFileManager* simpleFileManager;
     ClientData* clientData;
+    OriginalVersionData* versionData;
 }
 - (id)initWithServerData:(ServerData*)serverData ClientData:(ClientData*)clientData;
 /// 初回起動時に表示するzipを解凍する処理

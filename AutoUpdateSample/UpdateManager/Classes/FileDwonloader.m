@@ -10,13 +10,6 @@
 
 @implementation FileDwonloader
 
-- (id)initWithURL:(NSString*)url directory:(NSString *)dir {
-    SimpleFileManager* fmf = [[SimpleFileManager alloc] initWithFileManager:[NSFileManager defaultManager]];
-    AsyncURLConnection* auc = [AsyncURLConnection new];
-    self = [self initWithURL:url directory:dir fileHandleFactory:fmf asyncURLConnection:auc];
-    return self;
-}
-
 - (id)initWithURL:(NSString*)url directory:(NSString *)dir  fileHandleFactory:(SimpleFileManager*)fhf asyncURLConnection:(AsyncURLConnection*)asyncURLConnection {
     if(self = [super init]) {
         NSURLRequest* request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];

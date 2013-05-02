@@ -8,7 +8,6 @@
 
 #import "UpdateManager.h"
 #import "AppVersionData.h"
-#import "OriginalVersionData.h"
 #import "AsyncURLConnection.h"
 #import "ZipArchive.h"
 @implementation UpdateManager
@@ -16,9 +15,10 @@
 - (id)initWithServerData:(ServerData*)serverData ClientData:(ClientData*)inclientData {
     if(self = [super init]) {
         clientData = inclientData;
+        versionData = [[OriginalVersionData alloc] initWithUserDefaults:[NSUserDefaults standardUserDefaults]];
         simpleFileManager = [[SimpleFileManager alloc] initWithFileManager:[NSFileManager defaultManager]];
         manifestChecker = [[UpdateCheker alloc] initWithURL:serverData.versionDataUrl
-                                                versionData:AppVersionData.new
+                                                versionData:versionData
                                          asyncURLConnection:AsyncURLConnection.new];
         
         fileDownloader = [[FileDwonloader alloc] initWithURL:serverData.updateDataUrl
@@ -44,6 +44,12 @@
 - (void)update {
     [self unzipToHtmlFromZip:clientData.zipPath];
     [simpleFileManager clearDirectory:clientData.dlPath];
+    [self updateVsersion];
+}
+
+- (void)updateVsersion {
+    int version = [[NSString stringWithContentsOfFile:clientData.versionPath encoding:NSUTF8StringEncoding error:nil] integerValue];
+    [versionData setVersion:version];
 }
 
 - (void)setupFirstLunchIfNeed {
@@ -66,6 +72,7 @@
 }
 
 - (BOOL)isFirstLunch {
+    // htmlのパスが空っぽかどうかで判別
     return ![simpleFileManager.fileManager fileExistsAtPath:clientData.htmlPath];
 }
 

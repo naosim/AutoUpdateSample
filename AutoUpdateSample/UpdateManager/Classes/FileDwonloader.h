@@ -19,7 +19,6 @@
     SimpleFileManager* fileHandleFactory;
     ResultBlocks resultBlocks;
 }
-- (id)initWithURL:(NSString*)url directory:(NSString *)dir;
 - (id)initWithURL:(NSString*)url directory:(NSString *)dir fileHandleFactory:(SimpleFileManager*)fhf asyncURLConnection:(AsyncURLConnection*)asyncURLConnection;
 - (void)startWithBlocks:(ResultBlocks)blocks;
 - (void)cancel;

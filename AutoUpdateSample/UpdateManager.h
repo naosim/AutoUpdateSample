@@ -9,9 +9,11 @@
 #import <Foundation/Foundation.h>
 #import "VersionData.h"
 #import "UpdateCheker.h"
+#import "FileDwonloader.h"
 /// アップデートまわりのファサード
 @interface UpdateManager : NSObject {
     UpdateCheker* manifestChecker;
+    FileDwonloader* fileDownloader;
 }
 - (void)checkUpdate:(void(^)(BOOL result))blocks;
 - (void)startUpdate:(void(^)(BOOL result))blocks;

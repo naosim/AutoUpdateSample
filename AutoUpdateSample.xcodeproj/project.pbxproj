@@ -41,8 +41,8 @@
 		4434CE87173210DE002E73F6 /* AsyncURLConnectionMock.m in Sources */ = {isa = PBXBuildFile; fileRef = 4434CE86173210DE002E73F6 /* AsyncURLConnectionMock.m */; };
 		4434CE8A17321E99002E73F6 /* FileDwonloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 4434CE8917321E98002E73F6 /* FileDwonloader.m */; };
 		4434CE8B17321E99002E73F6 /* FileDwonloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 4434CE8917321E98002E73F6 /* FileDwonloader.m */; };
-		4434CE8F173227B6002E73F6 /* FileHandleFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 4434CE8E173227B6002E73F6 /* FileHandleFactory.m */; };
-		4434CE90173227B6002E73F6 /* FileHandleFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 4434CE8E173227B6002E73F6 /* FileHandleFactory.m */; };
+		4434CE8F173227B6002E73F6 /* SimpleFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4434CE8E173227B6002E73F6 /* SimpleFileManager.m */; };
+		4434CE90173227B6002E73F6 /* SimpleFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4434CE8E173227B6002E73F6 /* SimpleFileManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,8 +99,8 @@
 		4434CE8817321E98002E73F6 /* FileDwonloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileDwonloader.h; sourceTree = "<group>"; };
 		4434CE8917321E98002E73F6 /* FileDwonloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileDwonloader.m; sourceTree = "<group>"; };
 		4434CE8C173223FC002E73F6 /* ResultBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultBlocks.h; sourceTree = "<group>"; };
-		4434CE8D173227B6002E73F6 /* FileHandleFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileHandleFactory.h; sourceTree = "<group>"; };
-		4434CE8E173227B6002E73F6 /* FileHandleFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileHandleFactory.m; sourceTree = "<group>"; };
+		4434CE8D173227B6002E73F6 /* SimpleFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleFileManager.h; sourceTree = "<group>"; };
+		4434CE8E173227B6002E73F6 /* SimpleFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleFileManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,8 +222,8 @@
 				4434CE8817321E98002E73F6 /* FileDwonloader.h */,
 				4434CE8917321E98002E73F6 /* FileDwonloader.m */,
 				4434CE8C173223FC002E73F6 /* ResultBlocks.h */,
-				4434CE8D173227B6002E73F6 /* FileHandleFactory.h */,
-				4434CE8E173227B6002E73F6 /* FileHandleFactory.m */,
+				4434CE8D173227B6002E73F6 /* SimpleFileManager.h */,
+				4434CE8E173227B6002E73F6 /* SimpleFileManager.m */,
 			);
 			name = AutoUpdate;
 			sourceTree = "<group>";
@@ -371,7 +371,7 @@
 				4434CE7D17320038002E73F6 /* ServerData.m in Sources */,
 				4434CE82173202FC002E73F6 /* AppVersionData.m in Sources */,
 				4434CE8A17321E99002E73F6 /* FileDwonloader.m in Sources */,
-				4434CE8F173227B6002E73F6 /* FileHandleFactory.m in Sources */,
+				4434CE8F173227B6002E73F6 /* SimpleFileManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,7 +390,7 @@
 				4434CE83173202FC002E73F6 /* AppVersionData.m in Sources */,
 				4434CE87173210DE002E73F6 /* AsyncURLConnectionMock.m in Sources */,
 				4434CE8B17321E99002E73F6 /* FileDwonloader.m in Sources */,
-				4434CE90173227B6002E73F6 /* FileHandleFactory.m in Sources */,
+				4434CE90173227B6002E73F6 /* SimpleFileManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

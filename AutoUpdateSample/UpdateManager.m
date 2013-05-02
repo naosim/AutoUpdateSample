@@ -11,13 +11,17 @@
 #import "OriginalVersionData.h"
 #import "ServerData.h"
 
+#define APPLICATION_TMP_DIR	[NSHomeDirectory() stringByAppendingPathComponent:@"tmp"]
+
 @implementation UpdateManager
 
 - (id)init {
     if(self = [super init]) {
-        manifestChecker = [[UpdateCheker alloc] initWithURL:ServerData.new.versionDataUrl
+        ServerData* serverData = ServerData.new;
+        manifestChecker = [[UpdateCheker alloc] initWithURL:serverData.versionDataUrl
                                                 versionData:AppVersionData.new
                                          asyncURLConnection:AsyncURLConnection.new];
+        fileDownloader = [[FileDwonloader alloc] initWithURL:serverData.updateDataUrl directory:APPLICATION_TMP_DIR];
     }
     return self;
 }
@@ -27,7 +31,7 @@
 }
 
 - (void)startUpdate:(void(^)(BOOL result))blocks {
-    
+    [fileDownloader startWithBlocks:blocks];
 }
 
 - (BOOL)isReadyForUpate {

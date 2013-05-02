@@ -10,4 +10,5 @@
 
 @interface ServerData : NSObject
 @property (nonatomic, readonly)NSString* versionDataUrl;
+@property (nonatomic, readonly)NSString* updateDataUrl;
 @end

@@ -14,4 +14,5 @@
 - (void)sendAsynchronousRequest:(NSURLRequest *)request
 completionHandler:(void (^)(NSURLResponse*, NSData*, NSError*))blocks;
 
+- (NSURLConnection*)createConnectionWithRequest:(NSURLRequest *)request delegate:(id)delegate startImmediately:(BOOL)startImmediately;
 @end

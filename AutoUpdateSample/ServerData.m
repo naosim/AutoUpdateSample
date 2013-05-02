@@ -12,4 +12,8 @@
 - (NSString*)versionDataUrl {
     return @"http://192.168.44.60/~nao_pillows/test/version.txt";
 }
+
+- (NSString*)updateDataUrl {
+    return @"http://192.168.44.60/~nao_pillows/test/update.txt";
+}
 @end

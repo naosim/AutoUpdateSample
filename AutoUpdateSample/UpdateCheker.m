@@ -43,6 +43,8 @@
 }
 
 - (void)returnResult:(NSNumber*)result {
+    if(resultBlocks == nil) return;
+    
     resultBlocks([result boolValue]);
     resultBlocks = nil;
 }

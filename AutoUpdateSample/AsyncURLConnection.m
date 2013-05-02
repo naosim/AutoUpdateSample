@@ -14,4 +14,8 @@
     if(!queue) queue = [NSOperationQueue new];
     [NSURLConnection sendAsynchronousRequest:request queue:queue completionHandler:blocks];
 }
+
+- (NSURLConnection*)createConnectionWithRequest:(NSURLRequest *)request delegate:(id)delegate startImmediately:(BOOL)startImmediately {
+    return [[NSURLConnection alloc] initWithRequest:request delegate:delegate startImmediately:startImmediately];
+}
 @end

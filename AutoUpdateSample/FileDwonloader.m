@@ -9,10 +9,18 @@
 #import "FileDwonloader.h"
 
 @implementation FileDwonloader
-- (id)initWithURL:(NSString*)url directory:(NSString *)dir  fileHandleFactory:(FileHandleFactory*)fhf {
+
+- (id)initWithURL:(NSString*)url directory:(NSString *)dir {
+    SimpleFileManager* fmf = [[SimpleFileManager alloc] initWithFileManager:[NSFileManager defaultManager]];
+    AsyncURLConnection* auc = [AsyncURLConnection new];
+    self = [self initWithURL:url directory:dir fileHandleFactory:fmf asyncURLConnection:auc];
+    return self;
+}
+
+- (id)initWithURL:(NSString*)url directory:(NSString *)dir  fileHandleFactory:(SimpleFileManager*)fhf asyncURLConnection:(AsyncURLConnection*)asyncURLConnection {
     if(self = [super init]) {
         NSURLRequest* request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
-		con = [[NSURLConnection alloc] initWithRequest:request delegate:self startImmediately:NO];
+        con = [asyncURLConnection createConnectionWithRequest:request delegate:self startImmediately:NO];
         directoryPath = dir;
         fileHandleFactory = fhf;
     }
@@ -30,6 +38,9 @@
 }
 
 - (void)returnResult:(NSNumber*)result {
+    if(![result boolValue]) [fileHandleFactory clearDirectory:directoryPath];
+    if(resultBlocks == nil) return;
+    
     resultBlocks([result boolValue]);
     resultBlocks = nil;
 }
@@ -53,13 +64,11 @@
 }
 
 - (void)appendData:(NSData*)data {
-    if (file == nil) file = [fileHandleFactory createDirPath:directoryPath filePath:filePath];
+    if (file == nil) file = [fileHandleFactory createFileHandleWithDirPath:directoryPath filePath:filePath];
     [file writeData:data];
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
     [self returnResult:@YES];
 }
-
-
 @end

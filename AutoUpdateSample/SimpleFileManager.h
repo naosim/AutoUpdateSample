@@ -8,10 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-@interface FileHandleFactory : NSObject {
+@interface SimpleFileManager : NSObject {
     NSFileManager* fileManager;
 }
 - (id)initWithFileManager:(NSFileManager*)fm;
-- (NSFileHandle*)createDirPath:(NSString*)directoryPath filePath:(NSString*)filePath;
+- (NSFileHandle*)createFileHandleWithDirPath:(NSString*)directoryPath filePath:(NSString*)filePath;
+- (void) clearDirectory:(NSString*)dir;
 @end
 

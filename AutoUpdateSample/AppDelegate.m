@@ -23,10 +23,17 @@
     
     UpdateManager* manager = [UpdateManager new];
     [manager checkUpdate:^(BOOL result) {
-        [self performSelectorOnMainThread:@selector(showAlertWithBool:) withObject:[NSNumber numberWithBool:result] waitUntilDone:NO];
+        [self performSelectorOnMainThread:@selector(startUpdate:) withObject:manager waitUntilDone:NO];
+        
     }];
     
     return YES;
+}
+
+- (void)startUpdate:(UpdateManager*) manager {
+    [manager startUpdate:^(BOOL result) {
+        [self performSelectorOnMainThread:@selector(showAlertWithBool:) withObject:[NSNumber numberWithBool:result] waitUntilDone:NO];
+    }];
 }
 
 - (void)showAlertWithBool:(NSNumber*)boolNumber {

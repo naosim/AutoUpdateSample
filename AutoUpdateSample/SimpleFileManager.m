@@ -6,7 +6,7 @@
 //  Copyright (c) 2013年 Naosim. All rights reserved.
 //
 
-#import "FileHandleFactory.h"
+#import "SimpleFileManager.h"
 
 #ifdef DEBUG
 #  define LOG(...) NSLog(__VA_ARGS__)
@@ -23,6 +23,7 @@
 @interface NSFileManager (Utility)
 
 - (NSString *)suggestFilePath:(NSString *)path;
+- (void) clearDirectory:(NSString*)dir;
 - (void) clearTmpDirectory;
 
 @end
@@ -49,18 +50,21 @@
 }
 
 - (void) clearTmpDirectory {
-    
-	NSArray *contents = [self contentsOfDirectoryAtPath:APPLICATION_TMP_DIR error:nil];
+    [self clearDirectory:APPLICATION_TMP_DIR];
+}
+
+- (void) clearDirectory:(NSString*)dir {
+    NSArray *contents = [self contentsOfDirectoryAtPath:dir error:nil];
 	NSString *path;
 	for (path in contents) {
-		[self removeItemAtPath:[APPLICATION_TMP_DIR stringByAppendingPathComponent:path] error:nil];
+		[self removeItemAtPath:[dir stringByAppendingPathComponent:path] error:nil];
 	}
 }
 
 @end
 
 
-@implementation FileHandleFactory
+@implementation SimpleFileManager
 - (id)initWithFileManager:(NSFileManager*)fm {
     if(self = [super init]) {
         fileManager = fm;
@@ -68,7 +72,7 @@
     return self;
 }
 
-- (NSFileHandle*)createDirPath:(NSString*)directoryPath filePath:(NSString*)filePath {
+- (NSFileHandle*)createFileHandleWithDirPath:(NSString*)directoryPath filePath:(NSString*)filePath {
     BOOL isDir;
     if (![fileManager fileExistsAtPath:directoryPath isDirectory:&isDir]) {
         NSError *error;
@@ -83,6 +87,10 @@
     [fileManager createFileAtPath:filePath contents:[NSData data] attributes:nil];
     
     return [NSFileHandle fileHandleForWritingAtPath:filePath];
+}
+
+- (void) clearDirectory:(NSString*)dir {
+    [fileManager clearTmpDirectory];
 }
 
 @end

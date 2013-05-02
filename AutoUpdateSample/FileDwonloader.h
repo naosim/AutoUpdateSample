@@ -8,17 +8,19 @@
 
 #import <Foundation/Foundation.h>
 #import "ResultBlocks.h"
-#import "FileHandleFactory.h"
+#import "SimpleFileManager.h"
+#import "AsyncURLConnection.h"
 
 @interface FileDwonloader : NSObject<NSURLConnectionDataDelegate> {
     NSString *directoryPath;
 	NSString *filePath;
 	NSFileHandle *file;
 	NSURLConnection *con;
-    FileHandleFactory* fileHandleFactory;
+    SimpleFileManager* fileHandleFactory;
     ResultBlocks resultBlocks;
 }
-- (id)initWithURL:(NSString*)url directory:(NSString *)dir fileHandleFactory:(FileHandleFactory*)fhf;
+- (id)initWithURL:(NSString*)url directory:(NSString *)dir;
+- (id)initWithURL:(NSString*)url directory:(NSString *)dir fileHandleFactory:(SimpleFileManager*)fhf asyncURLConnection:(AsyncURLConnection*)asyncURLConnection;
 - (void)startWithBlocks:(ResultBlocks)blocks;
 - (void)cancel;
 @end

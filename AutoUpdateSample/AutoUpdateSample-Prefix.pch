@@ -12,3 +12,7 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
 #endif
+
+#define APPLICATION_TMP_DIR	[NSHomeDirectory() stringByAppendingPathComponent:@"tmp"]
+#define APPLICATION_DOC_DIR	[NSHomeDirectory() stringByAppendingPathComponent:  @"Documents"]
+

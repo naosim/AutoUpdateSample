@@ -21,19 +21,24 @@
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
     
+    
     UpdateManager* manager = [UpdateManager new];
+    if([manager isReadyForUpate]) {
+        [[[UIAlertView alloc] initWithTitle:@"result" message:@"ready" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"ok", nil] show];
+        return YES;
+    }
+    
     [manager checkUpdate:^(BOOL result) {
-        [self performSelectorOnMainThread:@selector(startUpdate:) withObject:manager waitUntilDone:NO];
+        if(!result) return;
         
+        [manager startDownloadNewBinary:^(BOOL result) {
+            if(!result) return;
+            
+            [self performSelectorOnMainThread:@selector(showAlertWithBool:) withObject:[NSNumber numberWithBool:result] waitUntilDone:NO];
+        }];
     }];
     
     return YES;
-}
-
-- (void)startUpdate:(UpdateManager*) manager {
-    [manager startUpdate:^(BOOL result) {
-        [self performSelectorOnMainThread:@selector(showAlertWithBool:) withObject:[NSNumber numberWithBool:result] waitUntilDone:NO];
-    }];
 }
 
 - (void)showAlertWithBool:(NSNumber*)boolNumber {

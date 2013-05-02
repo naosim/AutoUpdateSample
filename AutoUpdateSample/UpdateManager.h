@@ -14,8 +14,10 @@
 @interface UpdateManager : NSObject {
     UpdateCheker* manifestChecker;
     FileDwonloader* fileDownloader;
+    SimpleFileManager* simpleFileManager;
 }
 - (void)checkUpdate:(void(^)(BOOL result))blocks;
-- (void)startUpdate:(void(^)(BOOL result))blocks;
+- (void)startDownloadNewBinary:(void(^)(BOOL result))blocks;
 - (BOOL)isReadyForUpate;
+- (void)update;
 @end

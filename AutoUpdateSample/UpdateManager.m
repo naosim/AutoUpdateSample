@@ -10,18 +10,21 @@
 #import "AppVersionData.h"
 #import "OriginalVersionData.h"
 #import "ServerData.h"
-
-#define APPLICATION_TMP_DIR	[NSHomeDirectory() stringByAppendingPathComponent:@"tmp"]
-
+#import "AsyncURLConnection.h"
 @implementation UpdateManager
 
 - (id)init {
     if(self = [super init]) {
         ServerData* serverData = ServerData.new;
+        simpleFileManager = [[SimpleFileManager alloc] initWithFileManager:[NSFileManager defaultManager]];
         manifestChecker = [[UpdateCheker alloc] initWithURL:serverData.versionDataUrl
                                                 versionData:AppVersionData.new
                                          asyncURLConnection:AsyncURLConnection.new];
-        fileDownloader = [[FileDwonloader alloc] initWithURL:serverData.updateDataUrl directory:APPLICATION_TMP_DIR];
+        
+        fileDownloader = [[FileDwonloader alloc] initWithURL:serverData.updateDataUrl
+                                                   directory:APPLICATION_TMP_DIR
+                                           fileHandleFactory:simpleFileManager
+                                          asyncURLConnection:AsyncURLConnection.new];
     }
     return self;
 }
@@ -30,13 +33,15 @@
     [manifestChecker checkUpdate:blocks];
 }
 
-- (void)startUpdate:(void(^)(BOOL result))blocks {
+- (void)startDownloadNewBinary:(void(^)(BOOL result))blocks {
     [fileDownloader startWithBlocks:blocks];
 }
 
 - (BOOL)isReadyForUpate {
-    return NO;
+    return [simpleFileManager.fileManager fileExistsAtPath:[APPLICATION_TMP_DIR stringByAppendingString:@"/update.txt"]];
 }
 
-
+- (void)update {
+    
+}
 @end

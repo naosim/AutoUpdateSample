@@ -29,7 +29,7 @@
 
 - (void)startWithBlocks:(ResultBlocks)blocks {
     resultBlocks = blocks;
-    [con start];
+    [con performSelectorOnMainThread:@selector(start) withObject:nil waitUntilDone:YES];
 }
 
 - (void)cancel {

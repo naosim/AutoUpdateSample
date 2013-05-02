@@ -11,8 +11,10 @@
 @interface SimpleFileManager : NSObject {
     NSFileManager* fileManager;
 }
+@property (nonatomic, strong, readonly)NSFileManager* fileManager;
+
 - (id)initWithFileManager:(NSFileManager*)fm;
 - (NSFileHandle*)createFileHandleWithDirPath:(NSString*)directoryPath filePath:(NSString*)filePath;
-- (void) clearDirectory:(NSString*)dir;
+- (void)clearDirectory:(NSString*)dir;
 @end
 

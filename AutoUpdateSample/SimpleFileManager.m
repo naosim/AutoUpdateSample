@@ -16,10 +16,6 @@
 #  define LOG_CURRENT_METHOD ;
 #endif
 
-#define APPLICATION_TMP_DIR	[NSHomeDirectory() stringByAppendingPathComponent:@"tmp"]
-#define APPLICATION_DOC_DIR	[NSHomeDirectory() stringByAppendingPathComponent:  @"Documents"]
-
-
 @interface NSFileManager (Utility)
 
 - (NSString *)suggestFilePath:(NSString *)path;
@@ -93,4 +89,7 @@
     [fileManager clearTmpDirectory];
 }
 
+- (NSFileManager*)fileManager {
+    return fileManager;
+}
 @end

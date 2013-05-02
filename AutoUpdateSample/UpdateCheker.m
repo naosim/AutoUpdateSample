@@ -24,11 +24,11 @@
     resultBlocks = blocks;
     [conn sendAsynchronousRequest:[NSURLRequest requestWithURL:url] completionHandler:^(NSURLResponse *res, NSData *data, NSError *err) {
         if([self isManifestDownloadSuccessWithResponse:res data:data error:err]) {
-            // 失敗
-            [self returnResult:@NO];
-        } else {
             // 成功
             [self returnResult:[NSNumber numberWithBool:[self isUpdateWithData:data]]];
+        } else {
+            // 失敗
+            [self returnResult:@NO];
         }
     }];
 }

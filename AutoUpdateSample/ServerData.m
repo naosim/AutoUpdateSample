@@ -10,6 +10,6 @@
 
 @implementation ServerData
 - (NSString*)versionDataUrl {
-    return @"## Your server url ##";
+    return @"http://192.168.44.60/~nao_pillows/test/version.txt";
 }
 @end

@@ -19,9 +19,7 @@ typedef void (^ResultBlocks)(BOOL result);
     __block ResultBlocks resultBlocks;
     AsyncURLConnection* conn;
 }
-/**
- 
- */
+
 - (id)initWithURL:(NSString*)url versionData:(NSObject<VersionData>*)versionData asyncURLConnection:(AsyncURLConnection*)conn;
 
 // アップデートのチェックを開始する。アップデートがあったらブロックスでYESを渡す。

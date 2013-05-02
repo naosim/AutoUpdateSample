@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 
 #import "ViewController.h"
+#import "UpdateManager.h"
 
 @implementation AppDelegate
 
@@ -19,7 +20,17 @@
     self.viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
+    
+    UpdateManager* manager = [UpdateManager new];
+    [manager checkUpdate:^(BOOL result) {
+        [self performSelectorOnMainThread:@selector(showAlertWithBool:) withObject:[NSNumber numberWithBool:result] waitUntilDone:NO];
+    }];
+    
     return YES;
+}
+
+- (void)showAlertWithBool:(NSNumber*)boolNumber {
+    [[[UIAlertView alloc] initWithTitle:@"result" message:[NSString stringWithFormat:@"%@", [boolNumber boolValue] ? @"Update!" : @"none update."] delegate:nil cancelButtonTitle:nil otherButtonTitles:@"ok", nil] show];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

@@ -13,7 +13,7 @@
 @interface UpdateManager : NSObject {
     UpdateCheker* manifestChecker;
 }
-- (BOOL)isUpate;
 - (void)checkUpdate:(void(^)(BOOL result))blocks;
 - (void)startUpdate:(void(^)(BOOL result))blocks;
+- (BOOL)isReadyForUpate;
 @end

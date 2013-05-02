@@ -23,26 +23,8 @@
 		4434CE4E1730DC1B002E73F6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4434CE291730DC1A002E73F6 /* Foundation.framework */; };
 		4434CE561730DC1B002E73F6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4434CE541730DC1B002E73F6 /* InfoPlist.strings */; };
 		4434CE591730DC1B002E73F6 /* AutoUpdateSampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4434CE581730DC1B002E73F6 /* AutoUpdateSampleTests.m */; };
-		4434CE651730E081002E73F6 /* UpdateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4434CE641730E081002E73F6 /* UpdateManager.m */; };
-		4434CE661730E081002E73F6 /* UpdateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4434CE641730E081002E73F6 /* UpdateManager.m */; };
-		4434CE691730E1AD002E73F6 /* UpdateCheker.m in Sources */ = {isa = PBXBuildFile; fileRef = 4434CE681730E1AD002E73F6 /* UpdateCheker.m */; };
-		4434CE6A1730E1AD002E73F6 /* UpdateCheker.m in Sources */ = {isa = PBXBuildFile; fileRef = 4434CE681730E1AD002E73F6 /* UpdateCheker.m */; };
-		4434CE6D1730E893002E73F6 /* VersionData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4434CE6C1730E893002E73F6 /* VersionData.m */; };
-		4434CE6E1730E893002E73F6 /* VersionData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4434CE6C1730E893002E73F6 /* VersionData.m */; };
 		4434CE721730EC8F002E73F6 /* UpdateChekerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4434CE701730EC8F002E73F6 /* UpdateChekerTest.m */; };
-		4434CE751730F454002E73F6 /* AsyncURLConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 4434CE741730F454002E73F6 /* AsyncURLConnection.m */; };
-		4434CE761730F454002E73F6 /* AsyncURLConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 4434CE741730F454002E73F6 /* AsyncURLConnection.m */; };
-		4434CE791731F980002E73F6 /* OriginalVersionData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4434CE781731F980002E73F6 /* OriginalVersionData.m */; };
-		4434CE7A1731F980002E73F6 /* OriginalVersionData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4434CE781731F980002E73F6 /* OriginalVersionData.m */; };
-		4434CE7D17320038002E73F6 /* ServerData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4434CE7C17320038002E73F6 /* ServerData.m */; };
-		4434CE7E17320038002E73F6 /* ServerData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4434CE7C17320038002E73F6 /* ServerData.m */; };
-		4434CE82173202FC002E73F6 /* AppVersionData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4434CE81173202FC002E73F6 /* AppVersionData.m */; };
-		4434CE83173202FC002E73F6 /* AppVersionData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4434CE81173202FC002E73F6 /* AppVersionData.m */; };
 		4434CE87173210DE002E73F6 /* AsyncURLConnectionMock.m in Sources */ = {isa = PBXBuildFile; fileRef = 4434CE86173210DE002E73F6 /* AsyncURLConnectionMock.m */; };
-		4434CE8A17321E99002E73F6 /* FileDwonloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 4434CE8917321E98002E73F6 /* FileDwonloader.m */; };
-		4434CE8B17321E99002E73F6 /* FileDwonloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 4434CE8917321E98002E73F6 /* FileDwonloader.m */; };
-		4434CE8F173227B6002E73F6 /* SimpleFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4434CE8E173227B6002E73F6 /* SimpleFileManager.m */; };
-		4434CE90173227B6002E73F6 /* SimpleFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4434CE8E173227B6002E73F6 /* SimpleFileManager.m */; };
 		4434CE9217323D44002E73F6 /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4434CE9117323D44002E73F6 /* libz.1.1.3.dylib */; };
 		4434CE9317323D4E002E73F6 /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4434CE9117323D44002E73F6 /* libz.1.1.3.dylib */; };
 		4434CE9817323D7D002E73F6 /* ZipArchive.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4434CE9717323D7D002E73F6 /* ZipArchive.mm */; };
@@ -55,6 +37,24 @@
 		4434CEA817323D8C002E73F6 /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = 4434CE9F17323D8C002E73F6 /* unzip.c */; };
 		4434CEA917323D8C002E73F6 /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = 4434CEA117323D8C002E73F6 /* zip.c */; };
 		4434CEAA17323D8C002E73F6 /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = 4434CEA117323D8C002E73F6 /* zip.c */; };
+		4434CEB01732451E002E73F6 /* ServerData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4434CEAD1732451D002E73F6 /* ServerData.m */; };
+		4434CEB11732451E002E73F6 /* ServerData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4434CEAD1732451D002E73F6 /* ServerData.m */; };
+		4434CEB21732451E002E73F6 /* UpdateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4434CEAF1732451E002E73F6 /* UpdateManager.m */; };
+		4434CEB31732451E002E73F6 /* UpdateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4434CEAF1732451E002E73F6 /* UpdateManager.m */; };
+		4434CEBD1732458C002E73F6 /* AsyncURLConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 4434CEB51732458C002E73F6 /* AsyncURLConnection.m */; };
+		4434CEBE1732458C002E73F6 /* AsyncURLConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 4434CEB51732458C002E73F6 /* AsyncURLConnection.m */; };
+		4434CEBF1732458C002E73F6 /* FileDwonloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 4434CEB71732458C002E73F6 /* FileDwonloader.m */; };
+		4434CEC01732458C002E73F6 /* FileDwonloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 4434CEB71732458C002E73F6 /* FileDwonloader.m */; };
+		4434CEC11732458C002E73F6 /* SimpleFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4434CEBA1732458C002E73F6 /* SimpleFileManager.m */; };
+		4434CEC21732458C002E73F6 /* SimpleFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4434CEBA1732458C002E73F6 /* SimpleFileManager.m */; };
+		4434CEC31732458C002E73F6 /* UpdateCheker.m in Sources */ = {isa = PBXBuildFile; fileRef = 4434CEBC1732458C002E73F6 /* UpdateCheker.m */; };
+		4434CEC41732458C002E73F6 /* UpdateCheker.m in Sources */ = {isa = PBXBuildFile; fileRef = 4434CEBC1732458C002E73F6 /* UpdateCheker.m */; };
+		4434CECB173245DC002E73F6 /* AppVersionData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4434CEC6173245DB002E73F6 /* AppVersionData.m */; };
+		4434CECC173245DC002E73F6 /* AppVersionData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4434CEC6173245DB002E73F6 /* AppVersionData.m */; };
+		4434CECD173245DC002E73F6 /* OriginalVersionData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4434CEC8173245DC002E73F6 /* OriginalVersionData.m */; };
+		4434CECE173245DC002E73F6 /* OriginalVersionData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4434CEC8173245DC002E73F6 /* OriginalVersionData.m */; };
+		4434CECF173245DC002E73F6 /* VersionData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4434CECA173245DC002E73F6 /* VersionData.m */; };
+		4434CED0173245DC002E73F6 /* VersionData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4434CECA173245DC002E73F6 /* VersionData.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,29 +90,10 @@
 		4434CE551730DC1B002E73F6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4434CE571730DC1B002E73F6 /* AutoUpdateSampleTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AutoUpdateSampleTests.h; sourceTree = "<group>"; };
 		4434CE581730DC1B002E73F6 /* AutoUpdateSampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AutoUpdateSampleTests.m; sourceTree = "<group>"; };
-		4434CE631730E081002E73F6 /* UpdateManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateManager.h; sourceTree = "<group>"; };
-		4434CE641730E081002E73F6 /* UpdateManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateManager.m; sourceTree = "<group>"; };
-		4434CE671730E1AD002E73F6 /* UpdateCheker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateCheker.h; sourceTree = "<group>"; };
-		4434CE681730E1AD002E73F6 /* UpdateCheker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateCheker.m; sourceTree = "<group>"; };
-		4434CE6B1730E893002E73F6 /* VersionData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VersionData.h; sourceTree = "<group>"; };
-		4434CE6C1730E893002E73F6 /* VersionData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VersionData.m; sourceTree = "<group>"; };
 		4434CE6F1730EC8F002E73F6 /* UpdateChekerTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateChekerTest.h; sourceTree = "<group>"; };
 		4434CE701730EC8F002E73F6 /* UpdateChekerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateChekerTest.m; sourceTree = "<group>"; };
-		4434CE731730F454002E73F6 /* AsyncURLConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncURLConnection.h; sourceTree = "<group>"; };
-		4434CE741730F454002E73F6 /* AsyncURLConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncURLConnection.m; sourceTree = "<group>"; };
-		4434CE771731F980002E73F6 /* OriginalVersionData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OriginalVersionData.h; sourceTree = "<group>"; };
-		4434CE781731F980002E73F6 /* OriginalVersionData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OriginalVersionData.m; sourceTree = "<group>"; };
-		4434CE7B17320038002E73F6 /* ServerData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerData.h; sourceTree = "<group>"; };
-		4434CE7C17320038002E73F6 /* ServerData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerData.m; sourceTree = "<group>"; };
-		4434CE80173202FC002E73F6 /* AppVersionData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppVersionData.h; sourceTree = "<group>"; };
-		4434CE81173202FC002E73F6 /* AppVersionData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppVersionData.m; sourceTree = "<group>"; };
 		4434CE85173210DE002E73F6 /* AsyncURLConnectionMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncURLConnectionMock.h; sourceTree = "<group>"; };
 		4434CE86173210DE002E73F6 /* AsyncURLConnectionMock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncURLConnectionMock.m; sourceTree = "<group>"; };
-		4434CE8817321E98002E73F6 /* FileDwonloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileDwonloader.h; sourceTree = "<group>"; };
-		4434CE8917321E98002E73F6 /* FileDwonloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileDwonloader.m; sourceTree = "<group>"; };
-		4434CE8C173223FC002E73F6 /* ResultBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultBlocks.h; sourceTree = "<group>"; };
-		4434CE8D173227B6002E73F6 /* SimpleFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleFileManager.h; sourceTree = "<group>"; };
-		4434CE8E173227B6002E73F6 /* SimpleFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleFileManager.m; sourceTree = "<group>"; };
 		4434CE9117323D44002E73F6 /* libz.1.1.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.1.3.dylib; path = usr/lib/libz.1.1.3.dylib; sourceTree = SDKROOT; };
 		4434CE9617323D7D002E73F6 /* ZipArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZipArchive.h; path = ../../../../../Downloads/ZipArchive/ZipArchive.h; sourceTree = "<group>"; };
 		4434CE9717323D7D002E73F6 /* ZipArchive.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = ZipArchive.mm; path = ../../../../../Downloads/ZipArchive/ZipArchive.mm; sourceTree = "<group>"; };
@@ -125,6 +106,25 @@
 		4434CEA017323D8C002E73F6 /* unzip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = unzip.h; path = ../../../../../Downloads/ZipArchive/minizip/unzip.h; sourceTree = "<group>"; };
 		4434CEA117323D8C002E73F6 /* zip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = zip.c; path = ../../../../../Downloads/ZipArchive/minizip/zip.c; sourceTree = "<group>"; };
 		4434CEA217323D8C002E73F6 /* zip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = zip.h; path = ../../../../../Downloads/ZipArchive/minizip/zip.h; sourceTree = "<group>"; };
+		4434CEAC1732451D002E73F6 /* ServerData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ServerData.h; path = UpdateManager/ServerData.h; sourceTree = "<group>"; };
+		4434CEAD1732451D002E73F6 /* ServerData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ServerData.m; path = UpdateManager/ServerData.m; sourceTree = "<group>"; };
+		4434CEAE1732451E002E73F6 /* UpdateManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UpdateManager.h; path = UpdateManager/UpdateManager.h; sourceTree = "<group>"; };
+		4434CEAF1732451E002E73F6 /* UpdateManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UpdateManager.m; path = UpdateManager/UpdateManager.m; sourceTree = "<group>"; };
+		4434CEB41732458C002E73F6 /* AsyncURLConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AsyncURLConnection.h; path = UpdateManager/Classes/AsyncURLConnection.h; sourceTree = "<group>"; };
+		4434CEB51732458C002E73F6 /* AsyncURLConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AsyncURLConnection.m; path = UpdateManager/Classes/AsyncURLConnection.m; sourceTree = "<group>"; };
+		4434CEB61732458C002E73F6 /* FileDwonloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FileDwonloader.h; path = UpdateManager/Classes/FileDwonloader.h; sourceTree = "<group>"; };
+		4434CEB71732458C002E73F6 /* FileDwonloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FileDwonloader.m; path = UpdateManager/Classes/FileDwonloader.m; sourceTree = "<group>"; };
+		4434CEB81732458C002E73F6 /* ResultBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ResultBlocks.h; path = UpdateManager/Classes/ResultBlocks.h; sourceTree = "<group>"; };
+		4434CEB91732458C002E73F6 /* SimpleFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SimpleFileManager.h; path = UpdateManager/Classes/SimpleFileManager.h; sourceTree = "<group>"; };
+		4434CEBA1732458C002E73F6 /* SimpleFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SimpleFileManager.m; path = UpdateManager/Classes/SimpleFileManager.m; sourceTree = "<group>"; };
+		4434CEBB1732458C002E73F6 /* UpdateCheker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UpdateCheker.h; path = UpdateManager/Classes/UpdateCheker.h; sourceTree = "<group>"; };
+		4434CEBC1732458C002E73F6 /* UpdateCheker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UpdateCheker.m; path = UpdateManager/Classes/UpdateCheker.m; sourceTree = "<group>"; };
+		4434CEC5173245DB002E73F6 /* AppVersionData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppVersionData.h; path = UpdateManager/Classes/VersionData/AppVersionData.h; sourceTree = "<group>"; };
+		4434CEC6173245DB002E73F6 /* AppVersionData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppVersionData.m; path = UpdateManager/Classes/VersionData/AppVersionData.m; sourceTree = "<group>"; };
+		4434CEC7173245DC002E73F6 /* OriginalVersionData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OriginalVersionData.h; path = UpdateManager/Classes/VersionData/OriginalVersionData.h; sourceTree = "<group>"; };
+		4434CEC8173245DC002E73F6 /* OriginalVersionData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OriginalVersionData.m; path = UpdateManager/Classes/VersionData/OriginalVersionData.m; sourceTree = "<group>"; };
+		4434CEC9173245DC002E73F6 /* VersionData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VersionData.h; path = UpdateManager/Classes/VersionData/VersionData.h; sourceTree = "<group>"; };
+		4434CECA173245DC002E73F6 /* VersionData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VersionData.m; path = UpdateManager/Classes/VersionData/VersionData.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,7 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				4434CE9417323D59002E73F6 /* libs */,
-				4434CE621730E063002E73F6 /* AutoUpdate */,
+				4434CE621730E063002E73F6 /* UpdateManager */,
 				4434CE361730DC1A002E73F6 /* AppDelegate.h */,
 				4434CE371730DC1A002E73F6 /* AppDelegate.m */,
 				4434CE3F1730DC1A002E73F6 /* ViewController.h */,
@@ -235,36 +235,27 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		4434CE621730E063002E73F6 /* AutoUpdate */ = {
+		4434CE621730E063002E73F6 /* UpdateManager */ = {
 			isa = PBXGroup;
 			children = (
-				4434CE7F173202E2002E73F6 /* VersionData */,
-				4434CE631730E081002E73F6 /* UpdateManager.h */,
-				4434CE641730E081002E73F6 /* UpdateManager.m */,
-				4434CE671730E1AD002E73F6 /* UpdateCheker.h */,
-				4434CE681730E1AD002E73F6 /* UpdateCheker.m */,
-				4434CE731730F454002E73F6 /* AsyncURLConnection.h */,
-				4434CE741730F454002E73F6 /* AsyncURLConnection.m */,
-				4434CE7B17320038002E73F6 /* ServerData.h */,
-				4434CE7C17320038002E73F6 /* ServerData.m */,
-				4434CE8817321E98002E73F6 /* FileDwonloader.h */,
-				4434CE8917321E98002E73F6 /* FileDwonloader.m */,
-				4434CE8C173223FC002E73F6 /* ResultBlocks.h */,
-				4434CE8D173227B6002E73F6 /* SimpleFileManager.h */,
-				4434CE8E173227B6002E73F6 /* SimpleFileManager.m */,
+				4434CEAB1732447E002E73F6 /* Classes */,
+				4434CEAC1732451D002E73F6 /* ServerData.h */,
+				4434CEAD1732451D002E73F6 /* ServerData.m */,
+				4434CEAE1732451E002E73F6 /* UpdateManager.h */,
+				4434CEAF1732451E002E73F6 /* UpdateManager.m */,
 			);
-			name = AutoUpdate;
+			name = UpdateManager;
 			sourceTree = "<group>";
 		};
 		4434CE7F173202E2002E73F6 /* VersionData */ = {
 			isa = PBXGroup;
 			children = (
-				4434CE6B1730E893002E73F6 /* VersionData.h */,
-				4434CE6C1730E893002E73F6 /* VersionData.m */,
-				4434CE80173202FC002E73F6 /* AppVersionData.h */,
-				4434CE81173202FC002E73F6 /* AppVersionData.m */,
-				4434CE771731F980002E73F6 /* OriginalVersionData.h */,
-				4434CE781731F980002E73F6 /* OriginalVersionData.m */,
+				4434CEC5173245DB002E73F6 /* AppVersionData.h */,
+				4434CEC6173245DB002E73F6 /* AppVersionData.m */,
+				4434CEC7173245DC002E73F6 /* OriginalVersionData.h */,
+				4434CEC8173245DC002E73F6 /* OriginalVersionData.m */,
+				4434CEC9173245DC002E73F6 /* VersionData.h */,
+				4434CECA173245DC002E73F6 /* VersionData.m */,
 			);
 			name = VersionData;
 			sourceTree = "<group>";
@@ -302,6 +293,23 @@
 				4434CEA217323D8C002E73F6 /* zip.h */,
 			);
 			name = zip;
+			sourceTree = "<group>";
+		};
+		4434CEAB1732447E002E73F6 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				4434CE7F173202E2002E73F6 /* VersionData */,
+				4434CEB41732458C002E73F6 /* AsyncURLConnection.h */,
+				4434CEB51732458C002E73F6 /* AsyncURLConnection.m */,
+				4434CEB61732458C002E73F6 /* FileDwonloader.h */,
+				4434CEB71732458C002E73F6 /* FileDwonloader.m */,
+				4434CEB81732458C002E73F6 /* ResultBlocks.h */,
+				4434CEB91732458C002E73F6 /* SimpleFileManager.h */,
+				4434CEBA1732458C002E73F6 /* SimpleFileManager.m */,
+				4434CEBB1732458C002E73F6 /* UpdateCheker.h */,
+				4434CEBC1732458C002E73F6 /* UpdateCheker.m */,
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -417,20 +425,20 @@
 				4434CE341730DC1A002E73F6 /* main.m in Sources */,
 				4434CE381730DC1A002E73F6 /* AppDelegate.m in Sources */,
 				4434CE411730DC1A002E73F6 /* ViewController.m in Sources */,
-				4434CE651730E081002E73F6 /* UpdateManager.m in Sources */,
-				4434CE691730E1AD002E73F6 /* UpdateCheker.m in Sources */,
-				4434CE6D1730E893002E73F6 /* VersionData.m in Sources */,
-				4434CE751730F454002E73F6 /* AsyncURLConnection.m in Sources */,
-				4434CE791731F980002E73F6 /* OriginalVersionData.m in Sources */,
-				4434CE7D17320038002E73F6 /* ServerData.m in Sources */,
-				4434CE82173202FC002E73F6 /* AppVersionData.m in Sources */,
-				4434CE8A17321E99002E73F6 /* FileDwonloader.m in Sources */,
-				4434CE8F173227B6002E73F6 /* SimpleFileManager.m in Sources */,
 				4434CE9817323D7D002E73F6 /* ZipArchive.mm in Sources */,
 				4434CEA317323D8C002E73F6 /* ioapi.c in Sources */,
 				4434CEA517323D8C002E73F6 /* mztools.c in Sources */,
 				4434CEA717323D8C002E73F6 /* unzip.c in Sources */,
 				4434CEA917323D8C002E73F6 /* zip.c in Sources */,
+				4434CEB01732451E002E73F6 /* ServerData.m in Sources */,
+				4434CEB21732451E002E73F6 /* UpdateManager.m in Sources */,
+				4434CEBD1732458C002E73F6 /* AsyncURLConnection.m in Sources */,
+				4434CEBF1732458C002E73F6 /* FileDwonloader.m in Sources */,
+				4434CEC11732458C002E73F6 /* SimpleFileManager.m in Sources */,
+				4434CEC31732458C002E73F6 /* UpdateCheker.m in Sources */,
+				4434CECB173245DC002E73F6 /* AppVersionData.m in Sources */,
+				4434CECD173245DC002E73F6 /* OriginalVersionData.m in Sources */,
+				4434CECF173245DC002E73F6 /* VersionData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,22 +447,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				4434CE591730DC1B002E73F6 /* AutoUpdateSampleTests.m in Sources */,
-				4434CE661730E081002E73F6 /* UpdateManager.m in Sources */,
-				4434CE6A1730E1AD002E73F6 /* UpdateCheker.m in Sources */,
-				4434CE6E1730E893002E73F6 /* VersionData.m in Sources */,
 				4434CE721730EC8F002E73F6 /* UpdateChekerTest.m in Sources */,
-				4434CE761730F454002E73F6 /* AsyncURLConnection.m in Sources */,
-				4434CE7A1731F980002E73F6 /* OriginalVersionData.m in Sources */,
-				4434CE7E17320038002E73F6 /* ServerData.m in Sources */,
-				4434CE83173202FC002E73F6 /* AppVersionData.m in Sources */,
 				4434CE87173210DE002E73F6 /* AsyncURLConnectionMock.m in Sources */,
-				4434CE8B17321E99002E73F6 /* FileDwonloader.m in Sources */,
-				4434CE90173227B6002E73F6 /* SimpleFileManager.m in Sources */,
 				4434CE9917323D7D002E73F6 /* ZipArchive.mm in Sources */,
 				4434CEA417323D8C002E73F6 /* ioapi.c in Sources */,
 				4434CEA617323D8C002E73F6 /* mztools.c in Sources */,
 				4434CEA817323D8C002E73F6 /* unzip.c in Sources */,
 				4434CEAA17323D8C002E73F6 /* zip.c in Sources */,
+				4434CEB11732451E002E73F6 /* ServerData.m in Sources */,
+				4434CEB31732451E002E73F6 /* UpdateManager.m in Sources */,
+				4434CEBE1732458C002E73F6 /* AsyncURLConnection.m in Sources */,
+				4434CEC01732458C002E73F6 /* FileDwonloader.m in Sources */,
+				4434CEC21732458C002E73F6 /* SimpleFileManager.m in Sources */,
+				4434CEC41732458C002E73F6 /* UpdateCheker.m in Sources */,
+				4434CECC173245DC002E73F6 /* AppVersionData.m in Sources */,
+				4434CECE173245DC002E73F6 /* OriginalVersionData.m in Sources */,
+				4434CED0173245DC002E73F6 /* VersionData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

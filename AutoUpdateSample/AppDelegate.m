@@ -14,22 +14,20 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    
+    manager = [[UpdateManager alloc] initWithServerData:ServerData.new ClientData:ClientData.new];
     [self update];
+    
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
-    
-    
+
     return YES;
 }
 
 - (void)update {
-    manager = [[UpdateManager alloc] initWithServerData:ServerData.new ClientData:ClientData.new];
-    
     // 初回起動時に表示するhtmlをセットアップする
     [manager setupFirstLunchIfNeed];
     
@@ -37,7 +35,6 @@
     if([manager isReadyForUpate]) {
         // アップデート開始
         [manager update];
-        [[[UIAlertView alloc] initWithTitle:@"result" message:@"ready" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"ok", nil] show];
     } else {
         // アップデートがあるかどうかサーバに確認
         [manager checkUpdate:^(BOOL result) {
@@ -56,6 +53,7 @@
 }
 
 - (void)showUpdateNowDialog {
+    // 今すぐアップデートするかどうかの確認ダイアログを表示する
     [[[UIAlertView alloc] initWithTitle:@"result" message:@"update now?" delegate:self cancelButtonTitle:@"cancel" otherButtonTitles:@"OK", nil] show];
 }
 
@@ -89,7 +87,7 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    if([manager isReadyForUpate]) [manager update];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application

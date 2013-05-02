@@ -57,8 +57,8 @@
 		4434CED0173245DC002E73F6 /* VersionData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4434CECA173245DC002E73F6 /* VersionData.m */; };
 		4434CED317324D3B002E73F6 /* update.zip in Resources */ = {isa = PBXBuildFile; fileRef = 4434CED217324D3B002E73F6 /* update.zip */; };
 		4434CED417324D3B002E73F6 /* update.zip in Resources */ = {isa = PBXBuildFile; fileRef = 4434CED217324D3B002E73F6 /* update.zip */; };
-		4434CED7173251CC002E73F6 /* ClientData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4434CED6173251CB002E73F6 /* ClientData.m */; };
-		4434CED8173251CC002E73F6 /* ClientData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4434CED6173251CB002E73F6 /* ClientData.m */; };
+		4434CEDB17325AE2002E73F6 /* ClientData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4434CEDA17325AE1002E73F6 /* ClientData.m */; };
+		4434CEDC17325AE2002E73F6 /* ClientData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4434CEDA17325AE1002E73F6 /* ClientData.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -130,8 +130,8 @@
 		4434CEC9173245DC002E73F6 /* VersionData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VersionData.h; path = UpdateManager/Classes/VersionData/VersionData.h; sourceTree = "<group>"; };
 		4434CECA173245DC002E73F6 /* VersionData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VersionData.m; path = UpdateManager/Classes/VersionData/VersionData.m; sourceTree = "<group>"; };
 		4434CED217324D3B002E73F6 /* update.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = update.zip; sourceTree = "<group>"; };
-		4434CED5173251CB002E73F6 /* ClientData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClientData.h; sourceTree = "<group>"; };
-		4434CED6173251CB002E73F6 /* ClientData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClientData.m; sourceTree = "<group>"; };
+		4434CED917325AE1002E73F6 /* ClientData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ClientData.h; path = UpdateManager/ClientData.h; sourceTree = "<group>"; };
+		4434CEDA17325AE1002E73F6 /* ClientData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ClientData.m; path = UpdateManager/ClientData.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -249,8 +249,8 @@
 				4434CEAB1732447E002E73F6 /* Classes */,
 				4434CEAC1732451D002E73F6 /* ServerData.h */,
 				4434CEAD1732451D002E73F6 /* ServerData.m */,
-				4434CED5173251CB002E73F6 /* ClientData.h */,
-				4434CED6173251CB002E73F6 /* ClientData.m */,
+				4434CED917325AE1002E73F6 /* ClientData.h */,
+				4434CEDA17325AE1002E73F6 /* ClientData.m */,
 				4434CEAE1732451E002E73F6 /* UpdateManager.h */,
 				4434CEAF1732451E002E73F6 /* UpdateManager.m */,
 			);
@@ -459,7 +459,7 @@
 				4434CECB173245DC002E73F6 /* AppVersionData.m in Sources */,
 				4434CECD173245DC002E73F6 /* OriginalVersionData.m in Sources */,
 				4434CECF173245DC002E73F6 /* VersionData.m in Sources */,
-				4434CED7173251CC002E73F6 /* ClientData.m in Sources */,
+				4434CEDB17325AE2002E73F6 /* ClientData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,7 +484,7 @@
 				4434CECC173245DC002E73F6 /* AppVersionData.m in Sources */,
 				4434CECE173245DC002E73F6 /* OriginalVersionData.m in Sources */,
 				4434CED0173245DC002E73F6 /* VersionData.m in Sources */,
-				4434CED8173251CC002E73F6 /* ClientData.m in Sources */,
+				4434CEDC17325AE2002E73F6 /* ClientData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

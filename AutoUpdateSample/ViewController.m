@@ -28,5 +28,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+- (void)reload {
+    [webView reload];
+}
 @end

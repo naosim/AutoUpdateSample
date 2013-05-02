@@ -9,8 +9,6 @@
 #import "AppDelegate.h"
 
 #import "ViewController.h"
-#import "UpdateManager.h"
-#import "SimpleFileManager.h"
 
 @implementation AppDelegate
 
@@ -30,7 +28,7 @@
 }
 
 - (void)update {
-    UpdateManager* manager = [[UpdateManager alloc] initWithServerData:ServerData.new ClientData:ClientData.new];
+    manager = [[UpdateManager alloc] initWithServerData:ServerData.new ClientData:ClientData.new];
     
     // 初回起動時に表示するhtmlをセットアップする
     [manager setupFirstLunchIfNeed];
@@ -49,11 +47,23 @@
             [manager startDownloadNewBinary:^(BOOL result) {
                 if(!result) return;
                 
-                [self performSelectorOnMainThread:@selector(showAlertWithBool:) withObject:[NSNumber numberWithBool:result] waitUntilDone:NO];
+                // UPDATEするかどうかのダイアログを表示する
+                [self performSelectorOnMainThread:@selector(showUpdateNowDialog) withObject:nil waitUntilDone:NO];
             }];
         }];
     }
 
+}
+
+- (void)showUpdateNowDialog {
+    [[[UIAlertView alloc] initWithTitle:@"result" message:@"update now?" delegate:self cancelButtonTitle:@"cancel" otherButtonTitles:@"OK", nil] show];
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if(buttonIndex == alertView.cancelButtonIndex) return;
+    
+    [manager update];
+    [self.viewController reload];
 }
 
 - (void)showAlertWithBool:(NSNumber*)boolNumber {

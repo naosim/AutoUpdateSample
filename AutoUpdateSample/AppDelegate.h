@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "UpdateManager.h"
 @class ViewController;
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate, UIAlertViewDelegate> {
+    UpdateManager* manager;
+}
 
 @property (strong, nonatomic) UIWindow *window;
 

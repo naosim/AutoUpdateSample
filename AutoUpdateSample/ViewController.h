@@ -11,5 +11,5 @@
 @interface ViewController : UIViewController {
     IBOutlet UIWebView* webView;
 }
-
+- (void)reload;
 @end

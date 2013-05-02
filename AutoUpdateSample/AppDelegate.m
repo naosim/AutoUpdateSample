@@ -10,6 +10,7 @@
 
 #import "ViewController.h"
 #import "UpdateManager.h"
+#import "SimpleFileManager.h"
 
 @implementation AppDelegate
 
@@ -22,22 +23,27 @@
     [self.window makeKeyAndVisible];
     
     
-    UpdateManager* manager = [UpdateManager new];
+    UpdateManager* manager = [[UpdateManager alloc] initWithServerData:ServerData.new ClientData:ClientData.new];
+    [manager setupFirstLunchIfNeed];
+    
+    // アップデートが開始できる状態か?
     if([manager isReadyForUpate]) {
+        // アップデート開始
         [manager update];
         [[[UIAlertView alloc] initWithTitle:@"result" message:@"ready" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"ok", nil] show];
-        return YES;
-    }
-    
-    [manager checkUpdate:^(BOOL result) {
-        if(!result) return;
-        
-        [manager startDownloadNewBinary:^(BOOL result) {
+    } else {
+        // アップデートがあるかどうかサーバに確認
+        [manager checkUpdate:^(BOOL result) {
             if(!result) return;
             
-            [self performSelectorOnMainThread:@selector(showAlertWithBool:) withObject:[NSNumber numberWithBool:result] waitUntilDone:NO];
+            // アップデートがある場合、バイナリデータをDLする
+            [manager startDownloadNewBinary:^(BOOL result) {
+                if(!result) return;
+                
+                [self performSelectorOnMainThread:@selector(showAlertWithBool:) withObject:[NSNumber numberWithBool:result] waitUntilDone:NO];
+            }];
         }];
-    }];
+    }
     
     return YES;
 }

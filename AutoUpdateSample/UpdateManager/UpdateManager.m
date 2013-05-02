@@ -9,24 +9,20 @@
 #import "UpdateManager.h"
 #import "AppVersionData.h"
 #import "OriginalVersionData.h"
-#import "ServerData.h"
 #import "AsyncURLConnection.h"
 #import "ZipArchive.h"
 @implementation UpdateManager
 
-#define ZIP_PATH [APPLICATION_TMP_DIR stringByAppendingString:@"/update.zip"]
-#define HTML_PATH [APPLICATION_DOC_DIR stringByAppendingString:@"/html"]
-
-- (id)init {
+- (id)initWithServerData:(ServerData*)serverData ClientData:(ClientData*)inclientData {
     if(self = [super init]) {
-        ServerData* serverData = ServerData.new;
+        clientData = inclientData;
         simpleFileManager = [[SimpleFileManager alloc] initWithFileManager:[NSFileManager defaultManager]];
         manifestChecker = [[UpdateCheker alloc] initWithURL:serverData.versionDataUrl
                                                 versionData:AppVersionData.new
                                          asyncURLConnection:AsyncURLConnection.new];
         
         fileDownloader = [[FileDwonloader alloc] initWithURL:serverData.updateDataUrl
-                                                   directory:APPLICATION_TMP_DIR
+                                                   directory:clientData.dlPath
                                            fileHandleFactory:simpleFileManager
                                           asyncURLConnection:AsyncURLConnection.new];
     }
@@ -42,20 +38,34 @@
 }
 
 - (BOOL)isReadyForUpate {
-    return [simpleFileManager.fileManager fileExistsAtPath:ZIP_PATH];
+    return [simpleFileManager.fileManager fileExistsAtPath:clientData.zipPath];
 }
 
 - (void)update {
-    [simpleFileManager clearDirectory:HTML_PATH];
+    [self unzipToHtmlFromZip:clientData.zipPath];
+    [simpleFileManager clearDirectory:clientData.dlPath];
+}
+
+- (void)unzipToHtmlFromZip:(NSString*)zipPath {
+    [simpleFileManager clearDirectory:clientData.htmlPath];
     ZipArchive* za = [[ZipArchive alloc] init];
-    if([za UnzipOpenFile:ZIP_PATH]) {
-        BOOL ret = [za UnzipFileTo:HTML_PATH overWrite:YES];
+    if([za UnzipOpenFile:zipPath]) {
+        BOOL ret = [za UnzipFileTo:clientData.htmlPath overWrite:YES];
         if(NO == ret) {
-            // エラー処理
         }
         [za UnzipCloseFile];
     }
-    
-    [simpleFileManager clearDirectory:APPLICATION_TMP_DIR];
 }
+
+- (void)setupFirstLunchIfNeed {
+    if(![self isFirstLunch]) return;
+    NSString* zipPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingString:@"/update.zip"];
+    [self unzipToHtmlFromZip:zipPath];
+    
+}
+
+- (BOOL)isFirstLunch {
+    return ![simpleFileManager.fileManager fileExistsAtPath:clientData.htmlPath];
+}
+
 @end

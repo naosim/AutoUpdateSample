@@ -17,3 +17,17 @@
     return @"http://192.168.44.60/~nao_pillows/test/update.zip";
 }
 @end
+
+@implementation ClientData
+- (NSString*)zipPath {
+    return [APPLICATION_TMP_DIR stringByAppendingString:@"/update.zip"];
+}
+
+- (NSString*)dlPath {
+    return APPLICATION_TMP_DIR;
+}
+
+- (NSString*)htmlPath {
+    return [APPLICATION_DOC_DIR stringByAppendingString:@"/html"];
+}
+@end

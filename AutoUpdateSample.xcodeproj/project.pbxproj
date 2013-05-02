@@ -55,6 +55,8 @@
 		4434CECE173245DC002E73F6 /* OriginalVersionData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4434CEC8173245DC002E73F6 /* OriginalVersionData.m */; };
 		4434CECF173245DC002E73F6 /* VersionData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4434CECA173245DC002E73F6 /* VersionData.m */; };
 		4434CED0173245DC002E73F6 /* VersionData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4434CECA173245DC002E73F6 /* VersionData.m */; };
+		4434CED317324D3B002E73F6 /* update.zip in Resources */ = {isa = PBXBuildFile; fileRef = 4434CED217324D3B002E73F6 /* update.zip */; };
+		4434CED417324D3B002E73F6 /* update.zip in Resources */ = {isa = PBXBuildFile; fileRef = 4434CED217324D3B002E73F6 /* update.zip */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,6 +127,7 @@
 		4434CEC8173245DC002E73F6 /* OriginalVersionData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OriginalVersionData.m; path = UpdateManager/Classes/VersionData/OriginalVersionData.m; sourceTree = "<group>"; };
 		4434CEC9173245DC002E73F6 /* VersionData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VersionData.h; path = UpdateManager/Classes/VersionData/VersionData.h; sourceTree = "<group>"; };
 		4434CECA173245DC002E73F6 /* VersionData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VersionData.m; path = UpdateManager/Classes/VersionData/VersionData.m; sourceTree = "<group>"; };
+		4434CED217324D3B002E73F6 /* update.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = update.zip; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +190,7 @@
 		4434CE2D1730DC1A002E73F6 /* AutoUpdateSample */ = {
 			isa = PBXGroup;
 			children = (
+				4434CED117324D2C002E73F6 /* Resources */,
 				4434CE9417323D59002E73F6 /* libs */,
 				4434CE621730E063002E73F6 /* UpdateManager */,
 				4434CE361730DC1A002E73F6 /* AppDelegate.h */,
@@ -312,6 +316,14 @@
 			name = Classes;
 			sourceTree = "<group>";
 		};
+		4434CED117324D2C002E73F6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4434CED217324D3B002E73F6 /* update.zip */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -388,6 +400,7 @@
 				4434CE3C1730DC1A002E73F6 /* Default@2x.png in Resources */,
 				4434CE3E1730DC1A002E73F6 /* Default-568h@2x.png in Resources */,
 				4434CE441730DC1B002E73F6 /* ViewController.xib in Resources */,
+				4434CED317324D3B002E73F6 /* update.zip in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,6 +409,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4434CE561730DC1B002E73F6 /* InfoPlist.strings in Resources */,
+				4434CED417324D3B002E73F6 /* update.zip in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

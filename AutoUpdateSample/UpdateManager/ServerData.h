@@ -12,3 +12,9 @@
 @property (weak, nonatomic, readonly)NSString* versionDataUrl;
 @property (weak, nonatomic, readonly)NSString* updateDataUrl;
 @end
+
+@interface ClientData : NSObject
+@property (weak, nonatomic, readonly)NSString* zipPath;
+@property (weak, nonatomic, readonly)NSString* dlPath;
+@property (weak, nonatomic, readonly)NSString* htmlPath;
+@end

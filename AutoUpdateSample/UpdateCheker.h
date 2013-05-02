@@ -9,8 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "VersionData.h"
 #import "AsyncURLConnection.h"
-
-typedef void (^ResultBlocks)(BOOL result);
+#import "ResultBlocks.h"
 
 /// Check update on the web.
 @interface UpdateCheker : NSObject {

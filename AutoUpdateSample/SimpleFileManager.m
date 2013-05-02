@@ -86,7 +86,7 @@
 }
 
 - (void) clearDirectory:(NSString*)dir {
-    [fileManager clearTmpDirectory];
+    [fileManager clearDirectory:dir];
 }
 
 - (NSFileManager*)fileManager {

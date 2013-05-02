@@ -9,6 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface ServerData : NSObject
-@property (nonatomic, readonly)NSString* versionDataUrl;
-@property (nonatomic, readonly)NSString* updateDataUrl;
+@property (weak, nonatomic, readonly)NSString* versionDataUrl;
+@property (weak, nonatomic, readonly)NSString* updateDataUrl;
 @end

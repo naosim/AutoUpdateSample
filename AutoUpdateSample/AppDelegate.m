@@ -24,6 +24,7 @@
     
     UpdateManager* manager = [UpdateManager new];
     if([manager isReadyForUpate]) {
+        [manager update];
         [[[UIAlertView alloc] initWithTitle:@"result" message:@"ready" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"ok", nil] show];
         return YES;
     }

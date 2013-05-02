@@ -6,9 +6,9 @@
 //  Copyright (c) 2013年 Naosim. All rights reserved.
 //
 
-#import "ManifestCheker.h"
+#import "UpdateCheker.h"
 
-@implementation ManifestCheker
+@implementation UpdateCheker
 - (id)initWithURL:(NSString*)inurl versionData:(NSObject<VersionData>*)inversionData asyncURLConnection:(AsyncURLConnection*)inconn {
     if(self = [super init]) {
         url = [NSURL URLWithString:inurl];

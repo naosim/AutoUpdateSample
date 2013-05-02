@@ -8,10 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import "VersionData.h"
-#import "ManifestCheker.h"
+#import "UpdateCheker.h"
 /// アップデートまわりのファサード
 @interface UpdateManager : NSObject {
-    ManifestCheker* manifestChecker;
+    UpdateCheker* manifestChecker;
 }
 - (BOOL)isUpate;
 - (void)checkUpdate:(void(^)(BOOL result))blocks;

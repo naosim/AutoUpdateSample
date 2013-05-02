@@ -15,7 +15,7 @@
 
 - (id)init {
     if(self = [super init]) {
-        manifestChecker = [[ManifestCheker alloc] initWithURL:UPDATE_MANIFEST_URL versionData:OriginalVersionData.new asyncURLConnection:AsyncURLConnection.new];
+        manifestChecker = [[UpdateCheker alloc] initWithURL:UPDATE_MANIFEST_URL versionData:OriginalVersionData.new asyncURLConnection:AsyncURLConnection.new];
     }
     return self;
 }

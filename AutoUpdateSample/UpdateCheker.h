@@ -12,12 +12,16 @@
 
 typedef void (^ResultBlocks)(BOOL result);
 
-@interface ManifestCheker : NSObject {
+/// Check update on the web.
+@interface UpdateCheker : NSObject {
     NSURL* url;
     NSObject<VersionData>* versionData;
     __block ResultBlocks resultBlocks;
     AsyncURLConnection* conn;
 }
+/**
+ 
+ */
 - (id)initWithURL:(NSString*)url versionData:(NSObject<VersionData>*)versionData asyncURLConnection:(AsyncURLConnection*)conn;
 
 // アップデートのチェックを開始する。アップデートがあったらブロックスでYESを渡す。

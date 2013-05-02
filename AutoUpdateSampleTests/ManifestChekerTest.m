@@ -27,7 +27,7 @@
 - (void)testExample
 {
     OriginalVersionData* versinData = OriginalVersionData.new;
-    ManifestCheker* cheker = [[ManifestCheker alloc] initWithURL:@"" versionData:versinData asyncURLConnection:nil];
+    UpdateCheker* cheker = [[UpdateCheker alloc] initWithURL:@"" versionData:versinData asyncURLConnection:nil];
     [cheker checkUpdate:^(BOOL result) {
         STAssertTrue(result, @"アップデートあり");
     }];
